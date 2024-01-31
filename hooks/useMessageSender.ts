@@ -50,6 +50,7 @@ export const useMesseageSender = () => {
       key: apiKey,
       prompt: conversation.prompt,
       temperature: conversation.temperature,
+      max_tokens: updatedConversation.model.tokenLimit,
     };
     const chatModeRunner = chatModeSelector(chatMode);
     chatModeRunner.run({
