@@ -33,7 +33,6 @@ export const createMessagesToSend = (
     messagesToSend = [message, ...messagesToSend];
   }
   const maxToken = model.tokenLimit - contentLength;
-  console.log(`maxToken: ${maxToken}, tokenLimit: ${model.tokenLimit}`);
   return { messages: messagesToSend, maxToken, tokenCount: contentLength };
 };
 
