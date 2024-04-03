@@ -99,14 +99,14 @@ export class UserDb {
       await this.saveConversation(conversation);
     }
   }
-  removeConversation(id: string) {
+  async removeConversation(id: string) {
     this._conversations.deleteOne({
       userId: this._userId,
       'conversation.id': id,
     });
   }
 
-  removeAllConversations() {
+  async removeAllConversations() {
     this._conversations.deleteMany({ userId: this._userId });
   }
 
