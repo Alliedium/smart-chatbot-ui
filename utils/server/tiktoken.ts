@@ -11,7 +11,7 @@ export const getTiktokenEncoding = async (model: string): Promise<Tiktoken> => {
     return new Tiktoken(p50k.bpe_ranks, p50k.special_tokens, p50k.pat_str);
   }
   if (
-    modelId.indexOf('gpt-3.5') !== -1 || modelId.indexOf('gpt-4') !== -1 || modelId.indexOf('gpt-4-turbo-preview') !== -1
+    modelId.indexOf('gpt-3.5') !== -1 || modelId.indexOf('gpt-4') !== -1 || modelId.indexOf('gpt-4-turbo-preview') !== -1 || modelId.indexOf('gpt-4o') !== -1
   ) {
     return encoding_for_model(modelId, {
       '<|im_start|>': 100264,

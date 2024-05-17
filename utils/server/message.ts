@@ -40,7 +40,7 @@ export const createMessagesToSend = (
 // https://github.com/dqbd/tiktoken/issues/23#issuecomment-1483317174
 export function serializeMessages(model: string, messages: Message[]): string {
   const isChat =
-    model.indexOf('gpt-3.5-turbo') !== -1 || model.indexOf('gpt-4') !== -1 || model.indexOf('gpt-4-turbo-preview') !== -1;
+    model.indexOf('gpt-3.5-turbo') !== -1 || model.indexOf('gpt-4') !== -1 || model.indexOf('gpt-4-turbo-preview') !== -1 || model.indexOf('gpt-4o') !== -1;
   const msgSep = isChat ? '\n' : '';
   const roleSep = isChat ? '\n' : '<|im_sep|>';
   return [
